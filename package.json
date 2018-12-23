@@ -1,0 +1,34 @@
+{
+  "name": "jeffsum",
+  "version": "0.0.1",
+  "description": "Jeff Goldblum text placeholder generator of pure amazingness.",
+  "license": "MIT",
+  "author": "Christopher Voigt <chlorophyllkid@gmail.com>",
+  "homepage": "http://jeffsum.com/",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --quiet index.js test/**/*.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chlorophyllkid/jeffsum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chlorophyllkid/jeffsum/issues"
+  },
+  "keywords": [
+    "jeff",
+    "goldblum",
+    "lorem",
+    "ipsum",
+    "generator"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0"
+  }
+}
