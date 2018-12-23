@@ -10,16 +10,16 @@ npm install jeffsum -D
 ```
 import jeffsum from 'jeffsum'
 
-const awesomeText = jeffsum(3, 'paragraphs');
-
-console.log(awesomeText);
+// jeffsum(number, textType)
+const characters = jeffsum(5, 'characters');
+const words = jeffsum(5, 'words');
+const sentences = jeffsum(5, 'sentences');
 
 ```
 
-## Options
-The first parameter should be a number > 0.
+**number** - The amount of amazingness you want to receive. This should be a number greater than 0.
 
-The second parameter defines the text type. Possible options are `'characters'`, `'words'`, `'sentences'` and `'paragraphs'`.
+**textType** - Possible options are `'characters'`, `'words'`, `'sentences'`. (defaults to `'sentences'`)
 
 
 ## Licence
