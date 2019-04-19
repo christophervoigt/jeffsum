@@ -13,13 +13,13 @@ describe('jeffsum...', () => {
 
     it('it returns 5 space separated words on jeffsum(5, "words").', () => {
       const text = jeffsum(5, 'words');
-      const numOfSpaces = (text.match(/ /g) || []).length;
+      const numOfSpaces = (text.match(/ /g)).length;
       assert.equal(numOfSpaces, 4);
     });
 
     it('it returns 5 sentences on jeffsum(5, "sentences").', () => {
       const text = jeffsum(5, 'sentences');
-      const numOfDots = (text.match(/[^.!?]+[.!?]/g) || []).length;
+      const numOfDots = (text.match(/[^.!?]+[.!?]/g)).length;
       assert.equal(numOfDots, 5);
     });
   });
