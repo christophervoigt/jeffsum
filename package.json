@@ -6,6 +6,9 @@
   "author": "Christopher Voigt <chlorophyllkid@gmail.com>",
   "homepage": "http://jeffsum.com/",
   "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "lint": "prettier --config prettier.config.js --check {./test/**/*.js,*{.js,.json}} --write",
     "test": "mocha"
