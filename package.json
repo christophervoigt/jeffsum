@@ -7,7 +7,7 @@
   "homepage": "http://jeffsum.com/",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --quiet index.js test/**/*.js",
+    "lint": "prettier --config prettier.config.js --check {./test/**/*.js,*{.js,.json}} --write",
     "test": "mocha"
   },
   "repository": {
@@ -25,10 +25,8 @@
     "generator"
   ],
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "mocha": "^6.1.4"
+    "chai": "^4.3.4",
+    "mocha": "^9.1.0",
+    "prettier": "^2.3.2"
   }
 }

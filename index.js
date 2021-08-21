@@ -34,64 +34,64 @@ const quotes = [
   "I, uh, don't think I'm, y'know, so different than your average, y'know, average.",
   "It's a delight to trust somebody so completely.",
   "It's nice to play a character that has a soulful, dependent, close relationship. It must mean my character is interesting in some way.",
-];
+]
 
 function jeffsum(amount, type) {
   if (isNaN(amount)) {
-    throw new Error('amount of text must be a number');
+    throw new Error('amount of text must be a number')
   }
 
-  const number = Math.floor(amount);
+  const number = Math.floor(amount)
 
   if (number <= 0) {
-    throw new Error('amount of text must be greater than 0');
+    throw new Error('amount of text must be greater than 0')
   }
 
-  let result = '';
+  let result = ''
 
   // create a full text from quotes
-  let jeffsumText = '';
+  let jeffsumText = ''
   quotes.forEach(() => {
-    const randomSentence = quotes[Math.floor(Math.random() * quotes.length)];
-    jeffsumText += `${randomSentence} `;
-  });
+    const randomSentence = quotes[Math.floor(Math.random() * quotes.length)]
+    jeffsumText += `${randomSentence} `
+  })
 
   // create a list of words
-  let jeffsumWordArray = [];
+  let jeffsumWordArray = []
 
   // create a list of sentences
-  let jeffsumSentenceArray = [];
+  let jeffsumSentenceArray = []
 
   switch (type) {
     case 'characters':
-      result = jeffsumText.substr(0, number);
-      break;
+      result = jeffsumText.substr(0, number)
+      break
 
     case 'words':
-      jeffsumText = jeffsumText.split('.').join('');
-      jeffsumText = jeffsumText.split(',').join('');
-      jeffsumText = jeffsumText.split('?').join('');
-      jeffsumText = jeffsumText.split('!').join('');
-      jeffsumWordArray = jeffsumText.split(' ');
+      jeffsumText = jeffsumText.split('.').join('')
+      jeffsumText = jeffsumText.split(',').join('')
+      jeffsumText = jeffsumText.split('?').join('')
+      jeffsumText = jeffsumText.split('!').join('')
+      jeffsumWordArray = jeffsumText.split(' ')
 
       for (let i = 0; i < number; i += 1) {
-        result += `${jeffsumWordArray[Math.floor(Math.random() * jeffsumWordArray.length)]} `;
+        result += `${jeffsumWordArray[Math.floor(Math.random() * jeffsumWordArray.length)]} `
       }
-      result = result.slice(0, result.length - 1);
-      break;
+      result = result.slice(0, result.length - 1)
+      break
 
     default:
     case 'sentences':
-      jeffsumSentenceArray = jeffsumText.match(/[^.!?]+[.!?] /g);
+      jeffsumSentenceArray = jeffsumText.match(/[^.!?]+[.!?] /g)
 
       for (let j = 0; j < number; j += 1) {
-        result += jeffsumSentenceArray[Math.floor(Math.random() * jeffsumSentenceArray.length)];
+        result += jeffsumSentenceArray[Math.floor(Math.random() * jeffsumSentenceArray.length)]
       }
-      result = result.slice(0, result.length - 1);
-      break;
+      result = result.slice(0, result.length - 1)
+      break
   }
 
-  return result;
+  return result
 }
 
-module.exports = jeffsum;
+module.exports = jeffsum

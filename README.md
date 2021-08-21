@@ -6,8 +6,6 @@ Jeff Goldblum text placeholder generator of pure amazingness. (original by @sean
 [![NPM Version](http://img.shields.io/npm/v/jeffsum.svg?style=flat)](https://www.npmjs.com/package/jeffsum)
 [![NPM Downloads](https://img.shields.io/npm/dm/jeffsum.svg?style=flat)](https://npmcharts.com/compare/jeffsum?minimal=true)
 
-<a href="https://www.buymeacoffee.com/chlorophyllkid" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
-
 ## Install
 ```
 npm install jeffsum -D
